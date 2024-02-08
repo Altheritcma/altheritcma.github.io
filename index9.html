@@ -1,0 +1,315 @@
+<!-- perubahan dari index5.html tentang dari float ke flexbox -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dicoding.com 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800&family=Quicksand:wght@400;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0%;
+        padding: 0%;
+        font-family: Quicksand, sans-serif;
+    }
+
+    .banner {
+        background: #57a5f8;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 60px;
+    }
+
+    header {
+        display: inline;
+    }
+
+    h2,
+    h3 {
+        color: #00a2c6;
+    }
+
+    footer {
+        padding: 20px;
+        color: white;
+        background-color: #00a2c6;
+
+        text-align: center;
+        font-weight: bold;
+    }
+
+    nav {
+        width: 100%;
+        display: inline-flex;
+        background-color: #0279f8;
+        align-items: center;
+        position: sticky;
+        top: 0;
+    }
+
+    nav img {
+        height: 40px;
+        /* mix-blend-mode: multiply; */
+        border-radius: 5px;
+    }
+
+    nav ul {
+        padding-inline: 4rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav li {
+        list-style-type: none;
+    }
+
+    nav a {
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+    }
+
+    nav a:hover {
+        font-weight: bold;
+    }
+
+    #content {
+        flex: 5;
+        display: flex;
+        flex-flow: column nowrap;
+
+        gap: 1rem 2rem;
+    }
+
+    .featured-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    aside {
+        flex: 1;
+    }
+    aside article {        
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+    aside img {
+        border-radius: 50%;
+    }
+
+    main {
+        display: flex;
+        padding: 20px;
+
+        gap: 2rem;
+    }
+
+    .card {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* Perangkat dengan lebar layar 1200px dan di bawahnya */
+    @media screen and (max-width: 1200px) {
+        main {
+            flex-flow: column nowrap;
+        }
+
+        main aside {
+            align-self: center;
+        }
+    }
+
+    /* Perangkat dengan lebar layar 768px dan di bawahnya */
+    @media screen and (max-width: 768px) {
+        nav ul {
+            justify-content: center;
+        }
+
+        main aside {
+            align-self: stretch;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="banner">
+            <h1>Bandung</h1>
+            <p>
+                Kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut.
+            </p>
+        </div>
+        <nav>
+            <img src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/dicoding-logo.jpg"
+                alt="Dicoding Logo">
+            <ul>
+                <li><a href="#">Sejarah</a></li>
+                <li><a href="#">Geografis</a></li>
+                <li><a href="#">Wisata</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article id="content">
+            <Section class="card">
+                <h2>Sejarah</h2>
+                <img class="featured-img" src="https://source.unsplash.com/720x480/?Bandung" alt="Bandung-img" />
+                <p>
+                    Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava
+                    Gunung Tangkuban
+                    Parahu yang lalu membentuk telaga. Legenda yang diceritakan oleh orang-orang tua di Bandung
+                    mengatakan
+                    bahwa nama
+                    Bandung diambil dari sebuah kendaraan air yang terdiri dari dua perahu yang diikat berdampingan yang
+                    disebut perahu
+                    bandung yang digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II, untuk melayari Ci Tarum dalam
+                    mencari tempat
+                    kedudukan kabupaten yang baru untuk menggantikan ibu kota yang lama di Dayeuhkolot.
+                    <br>
+                    Berdasarkan filosofi Sunda, kata Bandung juga berasal dari kalimat Nga-Bandung-an Banda Indung, yang
+                    merupakan
+                    kalimat
+                    sakral dan luhur karena mengandung nilai ajaran Sunda. Nga-Bandung-an artinya menyaksikan atau
+                    bersaksi.
+                    Banda
+                    adalah
+                    segala sesuatu yang berada di alam hidup yaitu di bumi dan atmosfer, baik makhluk hidup maupun benda
+                    mati. Sinonim
+                    dari
+                    banda adalah harta. Indung berarti Ibu atau Bumi, disebut juga sebagai Ibu Pertiwi tempat Banda
+                    berada.
+                </p>
+            </Section>
+
+
+            <section class="card">
+                <h2>Geografis</h2>
+                <img class="featured-img" src="https://source.unsplash.com/720x480/?Bandung_Street" alt="Bandung-img" />
+                <p>
+                    Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan sebuah
+                    mangkok
+                    raksasa,
+                    secara geografis kota ini terletak di tengah-tengah provinsi Jawa Barat, serta berada pada
+                    ketinggian
+                    ±768 m di atas
+                    permukaan laut, dengan titik tertinggi di berada di sebelah utara dengan ketinggian 1.050 meter di
+                    atas
+                    permukaan laut dan
+                    sebelah selatan merupakan kawasan rendah dengan ketinggian 675 meter di atas permukaan laut.
+                    <br>
+                    Kota Bandung dialiri dua sungai utama, yaitu Sungai Cikapundung dan Sungai Citarum beserta anak-anak
+                    sungainya yang
+                    pada umumnya mengalir ke arah selatan dan bertemu di Sungai Citarum. Dengan kondisi yang demikian,
+                    Bandung selatan sangat
+                    rentan terhadap masalah banjir terutama pada musim hujan.
+                </p>
+            </section>
+
+
+            <section class="card">
+                <h2>Wisata</h2>
+                <img class="featured-img" src="https://source.unsplash.com/720x480/?Wisata" alt="Bandung-img" />
+                <p>
+                    Sejak dibukanya Jalan Tol Cipularang, kota Bandung telah menjadi tujuan utama dalam menikmati
+                    liburan
+                    akhir pekan
+                    terutama dari masyarakat yang berasal dari Jakarta sekitarnya. Selain menjadi kota wisata belanja,
+                    kota
+                    Bandung juga
+                    dikenal dengan sejumlah besar bangunan lama berarsitektur peninggalan Belanda.
+                </p>
+            </section>
+
+
+
+            <section class="card">
+                <h2>Farm House Lembang</h2>
+                <img class="featured-img" src="https://source.unsplash.com/720x480/?FarmHouse" alt="Bandung-img" />
+                <p>
+                    Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak pernah sepi
+                    pengunjung. Selain karena
+                    letaknya strategis, kawasan ini juga menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan
+                    dalam
+                    bentuk spot
+                    swafoto Instagramable.
+                </p>
+            </section>
+
+
+            <section class="card">
+                <h2>Observatorium Bosscha</h2>
+                <img class="featured-img" src="https://source.unsplash.com/720x480/?Observatorium" alt="Bandung-img" />
+                <p>
+                    Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti, Refraktor
+                    Bamberg,
+                    Cassegrain
+                    GOTO,
+                    dan Teleskop Surya. Refraktor Ganda Zeiss adalah jenis teleskop terbesar untuk meneropong bintang.
+                    Benda
+                    ini
+                    diletakkan
+                    pada atap kubah sehingga saat teropong digunakan, atap tersebut harus dibuka. Observatorium Bosscha
+                    boleh dikunjungi
+                    oleh siapa pun, tanpa tiket. Namun, bagi yang ingin menggunakan teleskop Zeiss, wajib mendaftarkan
+                    diri.
+                    Untuk
+                    instansi
+                    atau lembaga pendidikan, diberikan jadwal hari Selasa sampai Jumat. Sementara itu, kunjungan
+                    individu
+                    dibuka setiap
+                    hari
+                    Sabtu.
+                </p>
+            </section>
+        </article>
+
+
+        <aside>
+            <article>
+                <header>
+                    <h2>Kota Bandung</h2>
+                    <p>Kota Kembang Paris van Java</p>
+                </header>
+                <main>
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+                            alt="g Dicoding Logo" width="100px" />
+                        <figcaption>Dicoding</figcaption>
+                    </figure>
+                </main>
+            </article>
+        </aside>
+
+    </main>
+    <footer>
+        <p>
+            Copyright 2024 Altheritcma.
+        </p>
+    </footer>
+</body>
+
+</html>
